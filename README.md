@@ -8,15 +8,17 @@
 ██║   ██║██████╔╝██████╔╝██║███████║
 ██║   ██║██╔══██╗██╔══██╗██║██╔══██║
 ╚██████╔╝██║  ██║██████╔╝██║██║  ██║
- ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═╝
+╚══════╝ ╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═╝
 ```
 
-### Sistemas embarcados com propósito. Da borda ao painel, em tempo real.
+### Embedded systems with purpose. From edge to panel, in real time.
 
-*Um projeto [RovaTech](https://github.com/rovatech)*
+*A [RovaTech](https://github.com/rovatech) project*
 
-[![Status](https://img.shields.io/badge/status-em_desenvolvimento-orange?style=flat-square)]()
-[![Licença](https://img.shields.io/badge/licença-MIT-blue?style=flat-square)]()
+[🇧🇷 Português](./README.pt-BR.md) | 🇺🇸 English
+
+[![Status](https://img.shields.io/badge/status-in_development-orange?style=flat-square)]()
+[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)]()
 [![ESP+Lua](https://img.shields.io/badge/ESP-Lua-darkgreen?style=flat-square)]()
 [![Tasmota](https://img.shields.io/badge/Tasmota-firmware-red?style=flat-square)]()
 [![TouchDesigner](https://img.shields.io/badge/TouchDesigner-visual_engine-purple?style=flat-square)]()
@@ -25,136 +27,136 @@
 
 ---
 
-## O que é o Orbia
+## What is Orbia
 
-**Orbia** é uma suíte de sistemas embarcados modulares desenvolvida pela RovaTech, com foco em quatro domínios de impacto social: **casa, acessibilidade, indústria e educação**.
+**Orbia** is a suite of modular embedded systems developed by RovaTech, focused on four social impact domains: **home, accessibility, industry and education**.
 
-Cada sistema combina firmware em ESP com Lua, controle de cargas via Tasmota e visualização em tempo real no TouchDesigner — formando uma arquitetura de baixo custo, open source e replicável por qualquer pessoa ou organização.
+Each system combines ESP firmware with Lua, load control via Tasmota and real-time visualization in TouchDesigner — forming a low-cost, open source and replicable architecture for anyone or any organization.
 
 ---
 
 ## Stack
 
-| Camada | Tecnologia | Função |
+| Layer | Technology | Role |
 |---|---|---|
-| **Edge / Firmware** | ESP8266 / ESP32 + Lua | Processamento local, lógica embarcada |
-| **Controle de cargas** | Tasmota | Relés, interruptores, automação via MQTT |
-| **Visualização** | TouchDesigner | Dashboards, interfaces visuais e audiovisual em tempo real |
-| **Comunicação** | MQTT, HTTP REST, WebSocket | Integração entre camadas |
-| **Sensores** | DHT22, HC-SR04, MPU6050, PIR, MQ-series | Coleta de dados ambientais e de movimento |
+| **Edge / Firmware** | ESP8266 / ESP32 + Lua | Local processing, embedded logic |
+| **Load control** | Tasmota | Relays, switches, automation via MQTT |
+| **Visualization** | TouchDesigner | Dashboards, visual interfaces and real-time audiovisual |
+| **Communication** | MQTT, HTTP REST, WebSocket | Inter-layer integration |
+| **Sensors** | DHT22, HC-SR04, MPU6050, PIR, MQ-series | Environmental and motion data collection |
 
 ---
 
-## Módulos
+## Modules
 
-### 🏠 Casa — Automação Residencial Avançada
+### 🏠 Home — Advanced Residential Automation
 
-#### Sistema de Adaptação Ambiental
-Sensores de movimento, temperatura, umidade e luminosidade espalhados pela residência. O ESP com Lua processa os dados localmente, o Tasmota controla as cargas e o TouchDesigner gera um painel visual que **aprende os hábitos da família** e ajusta iluminação, ventilação e segurança automaticamente.
-- Detecção de movimento suspeito com alerta noturno
-- Ajuste automático de ambiente por horário e perfil de uso
-- Interface visual em tempo real para monitoramento
+#### Environmental Adaptation System
+Motion, temperature, humidity and light sensors distributed throughout the residence. The ESP with Lua processes data locally, Tasmota controls loads and TouchDesigner generates a visual panel that **learns the family's habits** and automatically adjusts lighting, ventilation and security.
+- Suspicious motion detection with night alerts
+- Automatic environment adjustment by time and usage profile
+- Real-time visual monitoring interface
 
-#### Sistema de Cuidados com Idosos
-Combina sensor de movimento, sensor de queda, monitoramento de porta e câmera simples. Detecta se o idoso ficou muito tempo parado, caiu ou deixou a porta aberta — projeta **alertas visuais na TV da sala** e envia notificação para o celular do familiar.
-- Detecção de inatividade prolongada e quedas
-- Integração com TV e dispositivos móveis
-- Histórico de eventos para acompanhamento
-
----
-
-### ♿ Acessibilidade — Inclusão mais profunda
-
-#### Mapa Sonoro e Visual para Deficientes Visuais
-Múltiplos sensores ultrassônicos e de movimento criam um **mapa do ambiente em tempo real**. O TouchDesigner transforma os dados em som direcional (volume proporcional à proximidade do obstáculo) e projeção visual para acompanhantes e educadores.
-- Navegação assistida em ambientes fechados
-- Suporte a professores em contexto escolar e terapêutico
-- Aplicável em casa, escola e transporte público
-
-#### Controle por Movimento para Paralisia Parcial
-Sistema que interpreta gestos complexos usando `MPU6050 + Lua` para **controlar luzes, TV, ventilador e acionar emergência**. O TouchDesigner serve como interface visual para familiares acompanharem os comandos executados.
-- Controle do ambiente por gestos
-- Acionamento de emergência integrado
-- Interface legível para familiares e cuidadores
+#### Elderly Care System
+Combines motion sensor, fall sensor, door monitoring and a simple camera. Detects if an elderly person has been still for too long, has fallen or left a door open — **projects visual alerts on the living room TV** and sends a notification to the family member's phone.
+- Prolonged inactivity and fall detection
+- TV and mobile device integration
+- Event history for follow-up
 
 ---
 
-### 🔧 Técnico / Profissional
+### ♿ Accessibility — Deeper Inclusion
 
-#### Monitoramento Preditivo em Pequenas Indústrias
-Sensores de vibração, temperatura e movimento em máquinas. O ESP com Lua faz pré-processamento dos dados, o Tasmota controla relés de segurança e o TouchDesigner gera um painel com **gráficos em tempo real, alertas de falha iminente e histórico de uso**.
-- Manutenção preditiva acessível para pequenas fábricas e oficinas
-- Redução de manutenção corretiva e paradas não programadas
-- Dados exportáveis para análise posterior
+#### Sound and Visual Map for the Visually Impaired
+Multiple ultrasonic and motion sensors create a **real-time map of the environment**. TouchDesigner transforms the data into directional sound (volume proportional to obstacle proximity) and visual projection for companions and educators.
+- Assisted navigation in indoor environments
+- Support for teachers in school and therapeutic contexts
+- Applicable at home, school and public transport
 
-#### Sistema de Controle de Qualidade em Laboratórios
-Sensor de movimento + temperatura + abertura de porta. Detecta acesso indevido, variação de temperatura fora do padrão e equipamentos ligados por tempo excessivo — **registrando tudo visualmente no TouchDesigner**.
-- Conformidade de ambiente para laboratórios e salas técnicas
-- Log automatizado de eventos e violações
-- Alertas em tempo real por MQTT
-
----
-
-### 🔬 Científico e Educacional
-
-#### Estação de Monitoramento Ambiental Comunitário
-Rede de ESPs com sensores de qualidade do ar, movimento de animais, temperatura, umidade e CO2. Os dados são processados em Lua e enviados para um **dashboard no TouchDesigner com visualizações científicas**. Projetado para escolas, universidades e ONGs.
-- Monitoramento de poluição em bairros e áreas de preservação
-- Dados abertos e exportáveis para pesquisa
-- Instalação de baixo custo com hardware acessível
-
-#### Laboratório Interativo de Física e Biologia
-Alunos usam sensores de movimento, força e distância para conduzir experimentos avançados. O TouchDesigner exibe **gráficos, simulações e análises em tempo real** — transformando aulas teóricas em experiências práticas sem equipamentos caros.
-- Substitui equipamentos de laboratório de alto custo
-- Interface intuitiva para professores e alunos
-- Expansível com novos sensores e experimentos
+#### Motion Control for Partial Paralysis
+System that interprets complex gestures using `MPU6050 + Lua` to **control lights, TV, fan and trigger emergency calls**. TouchDesigner serves as a large visual interface for family members to follow executed commands.
+- Full environment control by gestures
+- Integrated emergency trigger
+- Clear interface for family members and caregivers
 
 ---
 
-## Estrutura do repositório
+### 🔧 Technical / Professional
+
+#### Predictive Monitoring for Small Industries
+Vibration, temperature and motion sensors on machines. The ESP with Lua pre-processes data, Tasmota controls safety relays and TouchDesigner generates a panel with **real-time charts, imminent failure alerts and usage history**.
+- Predictive maintenance accessible to small factories and workshops
+- Reduction of corrective maintenance and unplanned downtime
+- Exportable data for further analysis
+
+#### Quality Control System for Laboratories
+Motion sensor + temperature + door opening. Detects unauthorized access, out-of-range temperature and equipment left on too long — **logging everything visually in TouchDesigner**.
+- Environment compliance for labs and technical rooms
+- Automated event and violation logging
+- Real-time alerts via MQTT
+
+---
+
+### 🔬 Scientific and Educational
+
+#### Community Environmental Monitoring Station
+Network of ESPs with air quality, animal motion, temperature, humidity and CO2 sensors. Data is processed in Lua and sent to a **TouchDesigner dashboard with scientific visualizations**. Designed for schools, universities and NGOs.
+- Pollution and conservation monitoring in neighborhoods
+- Open and exportable data for research
+- Low-cost installation with accessible hardware
+
+#### Interactive Physics and Biology Lab
+Students use motion, force and distance sensors to run advanced experiments. TouchDesigner displays **charts, simulations and real-time analysis** — turning theoretical classes into hands-on experiences without expensive equipment.
+- Replaces high-cost lab equipment
+- Intuitive interface for teachers and students
+- Expandable with new sensors and experiments
+
+---
+
+## Repository structure
 
 ```
 orbia/
-├── casa/
-│   ├── adaptacao-ambiental/
-│   └── cuidados-idosos/
-├── acessibilidade/
-│   ├── mapa-sonoro-visual/
-│   └── controle-por-movimento/
-├── tecnico/
-│   ├── monitoramento-preditivo/
-│   └── controle-qualidade-lab/
-├── educacional/
-│   ├── estacao-ambiental/
-│   └── laboratorio-interativo/
+├── home/
+│   ├── environmental-adaptation/
+│   └── elderly-care/
+├── accessibility/
+│   ├── sound-visual-map/
+│   └── motion-control/
+├── technical/
+│   ├── predictive-monitoring/
+│   └── lab-quality-control/
+├── educational/
+│   ├── environmental-station/
+│   └── interactive-lab/
 └── shared/
-    ├── firmware/           # Base ESP+Lua reutilizável
-    ├── tasmota-configs/    # Templates de configuração Tasmota
-    └── td-patches/         # Patches TouchDesigner base
+    ├── firmware/           # Reusable ESP+Lua base
+    ├── tasmota-configs/    # Tasmota configuration templates
+    └── td-patches/         # Base TouchDesigner patches
 ```
 
 ---
 
-## Como contribuir
+## How to contribute
 
 ```bash
-# Clone o repositório
+# Clone the repository
 git clone https://github.com/rovatech/orbia.git
 
-# Acesse o módulo desejado
-cd orbia/<dominio>/<projeto>
+# Navigate to the desired module
+cd orbia/<domain>/<project>
 cat README.md
 ```
 
-1. **Fork** o repositório
-2. Crie uma branch: `git checkout -b feat/nome-da-feature`
-3. Commit: `git commit -m 'feat: descrição clara'`
-4. Push: `git push origin feat/nome-da-feature`
-5. Abra um **Pull Request**
+1. **Fork** the repository
+2. Create a branch: `git checkout -b feat/feature-name`
+3. Commit: `git commit -m 'feat: clear description'`
+4. Push: `git push origin feat/feature-name`
+5. Open a **Pull Request**
 
 ---
 
-## Desenvolvido por
+## Developed by
 
 **[RovaTech](https://github.com/rovatech)** — [@pedro-juno](https://github.com/pedro-juno) · [@ana-mouca](https://github.com/ana-mouca)
 
@@ -162,6 +164,6 @@ cat README.md
 
 <div align="center">
 
-**Orbia · RovaTech** — *Da borda ao painel, em tempo real.*
+**Orbia · RovaTech** — *From edge to panel, in real time.*
 
 </div>
