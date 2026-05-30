@@ -15,7 +15,6 @@
 
 *A [RovaTech](https://github.com/rovatech) project*
 
-[🇧🇷 Português](./README.pt-BR.md) | 🇺🇸 English
 
 [![Status](https://img.shields.io/badge/status-in_development-orange?style=flat-square)]()
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)]()
