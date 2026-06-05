@@ -157,7 +157,7 @@ cat README.md
 
 ## Developed by
 
-**[RovaTech](https://github.com/rovatech)** — [@pedro-juno](https://github.com/pedro-juno) · [@ana-mouca](https://github.com/ana-mouca)
+**[RovaTech](https://github.com/RovaTech-br)** — [@pedro-juno](https://github.com/pedro-juno) · [@ana-mouca](https://github.com/ana-mouca)
 
 ---
 
